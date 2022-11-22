@@ -52,5 +52,5 @@ module.exports = {
 			xl: "1280px",
 		},
 	},	
-	purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
+	// purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
 };
