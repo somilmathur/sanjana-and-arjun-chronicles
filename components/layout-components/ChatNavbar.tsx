@@ -1,22 +1,33 @@
-import React from 'react'
-import { FiUser } from "react-icons/fi";
+import React from "react";
+import { FiPhoneCall, FiUser, FiVideo } from "react-icons/fi";
+import Avatar from "../global/Avatar";
 
-type Props = {}
+type Props = {};
 
 function ChatNavbar({}: Props) {
 	return (
 		<>
 			<div className="h-20 w-full bg-white flex justify-between items-center rounded-b-3xl">
-				<h3 className="text-2xl font-bold text-gray-900">Hey there! 👋</h3>
+				<div className="flex items-center">
+					<Avatar />
+					<h3 className="text-lg font-bold text-gray-900">
+						Sanjana and Arjun
+					</h3>
+				</div>
 
-				{/* Profile button   */}
+				{/* Call and video call buttons   */}
 
-				<button className="bg-gray-50 rounded-full px-2 py-2 flex items-center">
-					<FiUser className="text-gray-400 text-2xl" />
-				</button>
+				<div className="grid grid-cols-2 items-center gap-2">
+					<button className="bg-gray-50 col-span-1 rounded-full px-2 py-2 flex items-center">
+						<FiPhoneCall className="text-gray-400 text-2xl" />
+					</button>
+                    <button className="bg-gray-50 col-span-1 rounded-full px-2 py-2 flex items-center">
+						<FiVideo className="text-gray-400 text-2xl" />
+					</button>
+				</div>
 			</div>
 		</>
 	);
 }
 
-export default ChatNavbar
+export default ChatNavbar;

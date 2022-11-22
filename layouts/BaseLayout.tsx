@@ -8,7 +8,7 @@ type Props = any;
 function BaseLayout({ children }: Props) {
 	return (
 		<div className="mx-auto">
-			<div className=" mx-auto container">
+			<div className="mx-auto container px-6">
 				<Navbar />
 				<Search />
 				<hr className="w-10/12 opacity-50 mt-4" />
