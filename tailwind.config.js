@@ -53,5 +53,5 @@ module.exports = {
 		},
 	},	
 	// purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
-	purge: []
+	purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./Components/**/*.{js,ts,jsx,tsx}"]
 };
