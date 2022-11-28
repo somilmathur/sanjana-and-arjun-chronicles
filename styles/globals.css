@@ -3,15 +3,23 @@
 @tailwind utilities;
 
 .rsc-ts-bot .rsc-ts-bubble {
-    background: #E6E6FA !important;
-    color: #2a0133 !important;
+    background: #ffffff !important;
+    color: #151515 !important;
     font-weight: 500 !important;
     box-shadow: 0 12px 24px 0 rgb(0 0 0 / 0%) !important;
 }
 
 .rsc-ts-user .rsc-ts-bubble {
-    background: #fafae6 !important;
-    color: #332f01 !important;
+    background: #ff5e5e !important;
+    color: #ffffff !important;
     font-weight: 500 !important;
     box-shadow: 0 12px 24px 0 rgb(0 0 0 / 0%) !important;
+}
+
+.rsc-os-option .rsc-os-option-element {
+    margin-right: 5px;
+    background: #fafae6 !important;
+    color: #000000 !important;
+    box-shadow: 0 12px 24px 0 rgb(0 0 0 / 5%) !important;
+    border-radius: 8px !important;
 }

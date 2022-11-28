@@ -6,9 +6,9 @@ type Props = any;
 function ChatLayout({ children }: Props) {
 	return (
 		<div className="mx-auto">
+			<ChatNavbar />
 			<div className="mx-auto px-4">
-				<ChatNavbar />
-				<hr className="w-10/12 opacity-50" />
+				{/* <hr className="w-10/12 opacity-50" /> */}
 				{children}
 			</div>
 		</div>

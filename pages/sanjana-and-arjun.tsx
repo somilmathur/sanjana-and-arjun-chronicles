@@ -15,7 +15,7 @@ function SanjanaAndArjun({}: Props) {
 					content="Find the best real estate investments that will bring immense profit in the future. Here are the real estate opportunities that are safe & hassle-free."
 				/>
 			</Head>
-			<div className="bg-white h-screen">
+			<div className="bg-gray-50 h-screen">
 				<ChatLayout>
                     <Chatbot />
                 </ChatLayout>

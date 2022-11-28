@@ -7,12 +7,15 @@ type Props = {};
 function ChatNavbar({}: Props) {
 	return (
 		<>
-			<div className="h-24 w-full bg-white flex justify-between items-center rounded-b-3xl">
+			<div className="h-24 w-full bg-white flex justify-between items-center rounded-b-3xl px-4 shadow-sm">
 				<div className="flex items-center">
 					<Avatar />
-					<h3 className="text-lg font-medium font-cursive text-gray-900">
-						Sanjana and Arjun
-					</h3>
+					<div>
+						<p className="text-lg font-medium text-gray-900">
+							Sanjana and Arjun
+						</p>
+						{/* <span className="font-normal text-xs text-green-500 -mb-2">Online</span> */}
+					</div>
 				</div>
 
 				{/* Call and video call buttons   */}
@@ -21,7 +24,7 @@ function ChatNavbar({}: Props) {
 					<button className="bg-gray-50 col-span-1 rounded-full px-2 py-2 flex items-center">
 						<FiPhoneCall className="text-gray-400 text-2xl" />
 					</button>
-                    <button className="bg-gray-50 col-span-1 rounded-full px-2 py-2 flex items-center">
+					<button className="bg-gray-50 col-span-1 rounded-full px-2 py-2 flex items-center">
 						<FiVideo className="text-gray-400 text-2xl" />
 					</button>
 				</div>

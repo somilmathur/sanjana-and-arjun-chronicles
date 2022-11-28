@@ -9,8 +9,7 @@ const Chatbot = (props: Props) => {
 			<ChatBot
 				hideHeader
 				hideBotAvatar
-				hideUserAvatar
-				hide
+				hideUserAvatar				
 				footerStyle={{
 					visibility: "hidden",
 				}}				
