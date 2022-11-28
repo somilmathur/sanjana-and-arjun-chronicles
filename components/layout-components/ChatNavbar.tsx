@@ -7,10 +7,10 @@ type Props = {};
 function ChatNavbar({}: Props) {
 	return (
 		<>
-			<div className="h-20 w-full bg-white flex justify-between items-center rounded-b-3xl">
+			<div className="h-24 w-full bg-white flex justify-between items-center rounded-b-3xl">
 				<div className="flex items-center">
 					<Avatar />
-					<h3 className="text-lg font-bold text-gray-900">
+					<h3 className="text-lg font-medium font-cursive text-gray-900">
 						Sanjana and Arjun
 					</h3>
 				</div>

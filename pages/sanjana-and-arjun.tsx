@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import ChatLayout from "../layouts/ChatLayout";
+import Chatbot from "../components/chat-screen/Chatbot";
 
 type Props = {};
 
@@ -15,7 +16,9 @@ function SanjanaAndArjun({}: Props) {
 				/>
 			</Head>
 			<div className="bg-white h-screen">
-				<ChatLayout></ChatLayout>
+				<ChatLayout>
+                    <Chatbot />
+                </ChatLayout>
 			</div>
 		</>
 	);

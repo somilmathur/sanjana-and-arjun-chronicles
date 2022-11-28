@@ -13,7 +13,8 @@ module.exports = {
 	theme: {
 		extend: {		
 			fontFamily: {
-				sans: ['Raleway', ...defaultTheme.fontFamily.sans],
+				sans: ['Manrope', ...defaultTheme.fontFamily.sans],
+				cursive: ['Dancing Script', ...defaultTheme.fontFamily.sans],
 			},
 			fontSize: {
 				xxs: "0.6rem",
