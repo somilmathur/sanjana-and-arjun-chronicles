@@ -28,8 +28,8 @@ const Chatbot = (props: Props) => {
 					{
 						id: "are-you-busy-answer",
 						options: [
-							{ value: "yes", label: "Yes! 🎉", trigger: "can-you-cancel" },
-							{ value: "no", label: "No 😔", trigger: "do-you-love-cake" },
+							{ value: "yes", label: "Yes  😔", trigger: "can-you-cancel" },
+							{ value: "no", label: "No!  🎉", trigger: "do-you-love-cake" },
 						],
 					},
 					{

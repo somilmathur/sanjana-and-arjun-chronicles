@@ -20,15 +20,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px !important;
 }
 
 /* Yes button  */
-
 .rsc-os-option:nth-child(1) .rsc-os-option-element {
     margin-right: 5px;
     background: #151515 !important;
     color: #ffffff !important;
-    padding: 10px !important;
+    padding: 16px !important;
     box-shadow: 0 12px 24px 0 rgb(0 0 0 / 5%) !important;
     border-radius: 12px !important;
 }
@@ -38,7 +38,7 @@
     margin-right: 5px;
     background: #ffffff !important;
     color: #000000 !important;
-    padding: 10px !important;
+    padding: 16px !important;
     box-shadow: 0 12px 24px 0 rgb(0 0 0 / 5%) !important;
     border-radius: 12px !important;
 }
