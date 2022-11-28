@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .rsc-ts-bot .rsc-ts-bubble {
-    background: #ffffff !important;
-    color: #151515 !important;
+    background: #151515 !important;
+    color: #ffffff !important;
     font-weight: 500 !important;
     box-shadow: 0 12px 24px 0 rgb(0 0 0 / 0%) !important;
 }
@@ -26,19 +26,21 @@
 /* Yes button  */
 .rsc-os-option:nth-child(1) .rsc-os-option-element {
     margin-right: 5px;
-    background: #151515 !important;
-    color: #ffffff !important;
+    background: #ffffff !important;
+    color: #151515 !important;
     padding: 16px !important;
     box-shadow: 0 12px 24px 0 rgb(0 0 0 / 5%) !important;
     border-radius: 12px !important;
+    border: black 1px dashed;
 }
 
 /* No button  */
 .rsc-os-option:nth-child(2) .rsc-os-option-element {
     margin-right: 5px;
     background: #ffffff !important;
-    color: #000000 !important;
+    color: #151515 !important;
     padding: 16px !important;
     box-shadow: 0 12px 24px 0 rgb(0 0 0 / 5%) !important;
     border-radius: 12px !important;
+    border: black 1px dashed;
 }

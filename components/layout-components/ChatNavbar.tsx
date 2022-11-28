@@ -11,7 +11,7 @@ function ChatNavbar({}: Props) {
 				<div className="flex items-center">
 					<Avatar />
 					<div>
-						<p className="text-lg font-medium text-gray-900">
+						<p className="text-lg font-bold text-gray-900">
 							Sanjana and Arjun
 						</p>
 						{/* <span className="font-normal text-xs text-green-500 -mb-2">Online</span> */}
