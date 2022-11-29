@@ -35,7 +35,7 @@ const Chatbot = (props: Props) => {
 					},
 					{
 						id: "can-you-cancel",
-						message: "Can you cancel?",
+						message: "Can you cancel your plans?",
 						trigger: "can-you-cancel-answer",
 					},
 					{
@@ -46,7 +46,7 @@ const Chatbot = (props: Props) => {
 								label: "Anything for you guys! 🥹",
 								trigger: "do-you-love-cake",
 							},
-							{ value: "no", label: "No!  😞", trigger: "can-you-cancel" },
+							{ value: "no", label: "No!  😞", trigger: "please" },
 						],
 					},
 					{
