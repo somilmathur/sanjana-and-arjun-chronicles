@@ -44,7 +44,7 @@ const Chatbot = (props: Props) => {
 							{
 								value: "yes",
 								label: "Anything for you guys! 🥹",
-								trigger: "do-you-love-cake",
+								trigger: "positive-end",
 							},
 							{ value: "no", label: "No!  😞", trigger: "please" },
 						],
@@ -142,9 +142,38 @@ const Chatbot = (props: Props) => {
 					},
 					{
 						id: "do-you-love-cake",
-						message: "Do you love cake?",
-						end: true
-						// trigger: "are-you-busy-answer",
+						message: "Do you love cake?",						
+						trigger: "do-you-love-cake-answer",
+					},
+					{
+						id: "do-you-love-cake-answer",
+						options: [
+							{
+								value: "yes",
+								label: "Yes, who doesn't?",
+								trigger: "positive-end",
+							},
+							{
+								value: "no",
+								label: "Nope",
+								trigger: "do-you-like-to-party",
+							},
+						],
+					},
+					{
+						id: "do-you-like-to-party",
+						message: "Do you want to party?",						
+						trigger: "do-you-like-to-party-answer",
+					},
+					{
+						id: "do-you-like-to-party-answer",
+						options: [
+							{
+								value: "yes",
+								label: "Yes!",
+								trigger: "positive-end",
+							}
+						],
 					},
 					{
 						id: "negative-end",

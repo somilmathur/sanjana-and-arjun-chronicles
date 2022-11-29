@@ -34,7 +34,7 @@
 }
 
 /* Yes button  */
-.rsc-os-option:nth-child(1) .rsc-os-option-element {
+.rsc-os-option .rsc-os-option-element {
     margin-right: 5px;
     background: #ffffff !important;
     color: #151515 !important;
@@ -45,7 +45,7 @@
 }
 
 /* No button  */
-.rsc-os-option:nth-child(2) .rsc-os-option-element {
+/* .rsc-os-option:nth-child(2) .rsc-os-option-element {
     margin-right: 5px;
     background: #ffffff !important;
     color: #151515 !important;
@@ -53,4 +53,4 @@
     box-shadow: 0 12px 24px 0 rgb(0 0 0 / 5%) !important;
     border-radius: 12px !important;
     border: black 1px dashed;
-}
+} */

@@ -33,7 +33,7 @@ module.exports = {
 				glass: "rgba(0, 0, 0, 0.5)",			
 			},									
 			colors: {
-				primary: "#5359ea",						
+				primary: "#ff5e5e",						
 			},									
 			scale: {
 				101: "1.01",

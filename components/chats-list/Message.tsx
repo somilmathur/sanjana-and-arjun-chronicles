@@ -30,7 +30,7 @@ function Message({ from, message, time, numberOfUnreadMessages }: Props) {
 
 				<div className="flex flex-col justify-end items-center">
 					<h6 className="text-gray-300 text-sm font-medium mb-2">{time}</h6>
-					<div className="w-6 h-6 relative rounded-full bg-yellow-400">
+					<div className="w-6 h-6 relative rounded-full bg-primary">
 						<span className="text-white text-center absolute top-0 bottom-0 left-0 right-0">
 							{numberOfUnreadMessages}
 						</span>
