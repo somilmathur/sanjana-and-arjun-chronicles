@@ -78,12 +78,17 @@ const Chatbot = (props: Props) => {
 					{
 						id: "rsvp",
 						message: "Let me RSVP you in. What's your name?",
+						trigger: "rsvp-answer",
+					},
+					{
+						id: "rsvp-answer",
+						user: true,
 						trigger: "how-many-people",
 					},
 					{
 						id: "how-many-people",
 						message: "How many people in your party will be joining?",
-						trigger: "accomodation",
+						trigger: "how-many-people-answer",
 					},
 					{
 						id: "how-many-people-answer",
