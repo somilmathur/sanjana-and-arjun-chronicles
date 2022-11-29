@@ -13,6 +13,7 @@ const Chatbot = (props: Props) => {
 				ref={chatbotRef}
 				hideBotAvatar
 				hideUserAvatar	
+				userDelay={0}
 				placeholder="Type here..."			
 				style={{
 					background: "#ffffff00",
