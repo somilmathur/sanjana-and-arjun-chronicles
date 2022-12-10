@@ -61,7 +61,7 @@ const AppState = ({
     }).then(res => res.json().then((res: UserType | null) => {
       return res
     }));
-    if(user) SetUser(user)
+    if(user) SetUser(user[0])
 	};
 
 	const context: AppContextInterface = {
