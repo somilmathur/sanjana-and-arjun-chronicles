@@ -11,14 +11,13 @@ export default async function handler(req, res) {
       let bodyObject = JSON.parse(req.body);
       console.log("body", bodyObject)
       const rsvpObject = {
-        name: bodyObject.answers.steps["rsvp-answer"].message,
-        requiresAccommodation: bodyObject.answers.steps["accomodation-answer"]?.message,
-        peopleInParty: bodyObject.answers.steps["how-many-people-answer"].message,
+        name: bodyObject.steps["rsvp-answer"].message,
+        requiresAccommodation: bodyObject.steps["accomodation-answer"]?.message,
+        peopleInParty: bodyObject.steps["how-many-people-answer"].message,
         createdAt: dayjs().utcOffset(330).format(),
-        answers: bodyObject.answers.steps,
+        answers: bodyObject.steps,
       }
       let rsvp = await db.collection("rsvp").insertOne(rsvpObject);
-      console.log("bodyObject ->>", rsvp)
       res.json(rsvp);
       break;   
   }
