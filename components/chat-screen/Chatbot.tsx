@@ -12,7 +12,7 @@ type Props = {};
 const Chatbot = (props: Props) => {
 	const router = useRouter();
 	const { UUID, Loading } : AppContextInterface = useAppContext();
-
+	console.log("UUID -->", UUID)
 	// This is the default configuration if no query param is given since most people will be invited for a single day and without stay.
 	let STEPS_TO_USE: any = singleDayWithoutStay.steps;
 
