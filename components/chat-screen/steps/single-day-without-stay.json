@@ -75,50 +75,30 @@
                 {
                     "value": "1",
                     "label": "Just me",
-                    "trigger": "accomodation"
+                    "trigger": "positive-end"
                 },
                 {
                     "value": "2",
                     "label": "2",
-                    "trigger": "accomodation"
+                    "trigger": "positive-end"
                 },
                 {
                     "value": "3",
                     "label": "3",
-                    "trigger": "accomodation"
+                    "trigger": "positive-end"
                 },
                 {
                     "value": "4",
                     "label": "4",
-                    "trigger": "accomodation"
+                    "trigger": "positive-end"
                 },
                 {
                     "value": "4+",
                     "label": "4+",
-                    "trigger": "accomodation"
-                }
-            ]
-        },
-        {
-            "id": "accomodation",
-            "message": "Would you be requiring accomodation?",
-            "trigger": "accomodation-answer"
-        },
-        {
-            "id": "accomodation-answer",
-            "options": [
-                {
-                    "value": "yes",
-                    "label": "Yes, please!",
-                    "trigger": "positive-end"
-                },
-                {
-                    "value": "no",
-                    "label": "No, I'll manage.",
                     "trigger": "positive-end"
                 }
             ]
-        },
+        },      
         {
             "id": "how-about-foods-and-drinks",
             "message": "How about good food and drinks, won't that be a delight?",						

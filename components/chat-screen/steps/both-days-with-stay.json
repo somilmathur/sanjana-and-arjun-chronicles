@@ -2,7 +2,7 @@
     "steps": [
         {
             "id": "are-you-free",
-            "message": "Are you free on 16th February, 2023?",
+            "message": "Are you free on 15th and 16th February, 2023?",
             "trigger": "are-you-free-answer"
         },
         {
@@ -51,7 +51,7 @@
         {
             "id": "go-to-rsvp",
             "message":
-                "Woohoo! Awesome! We are getting married on 16th February, 2023 and we'd love for you to join us!",
+                "Woohoo! Awesome! We are getting married on 15th and 16th February, 2023 and we'd love for you to join us!",
             "trigger": "rsvp"
         },
         {
