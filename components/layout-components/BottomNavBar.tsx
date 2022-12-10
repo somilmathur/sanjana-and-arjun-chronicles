@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { FiMapPin, FiMessageCircle, FiPlus, FiEdit2 } from "react-icons/fi";
 import Avatar from "../global/Avatar";
@@ -7,17 +9,32 @@ import MotionDrawer from "../global/MotionDrawer";
 type Props = {};
 
 function BottomNavBar({}: Props) {
+	const router = useRouter();
+	console.log(router)
 	const [showSendMessageDrawer, setShowSendMessageDrawer] = useState(false);
+	const activePage = router.pathname === "/" ? "home" : "location";
 	return (
 		<div className="h-20 w-full px-10 items-center fixed bottom-0 flex justify-around items-center shadow-custom-card rounded-t-3xl">
-			<FiMessageCircle className="text-3xl text-primary" />
+			<Link href={{ pathname: "/", query: router.query }}>
+				<FiMessageCircle
+					className={`text-3xl text-${
+						activePage === "home" ? "primary" : "gray-300"
+					}`}
+				/>
+			</Link>
 			<div className="bg-primary w-16 h-16 -mt-16 rounded-full flex justify-center items-center shadow-custom-card">
 				<FiEdit2
 					className="text-3xl text-white text-center"
 					onClick={() => setShowSendMessageDrawer(true)}
 				/>
 			</div>
-			<FiMapPin className="text-3xl text-gray-300" />
+			<Link href={{ pathname: "/location", query: router.query }}>
+				<FiMapPin
+					className={`text-3xl text-${
+						activePage === "location" ? "primary" : "gray-300"
+					}`}
+				/>
+			</Link>
 
 			{/* Send message to couple modal/drawer  */}
 			<MotionDrawer
@@ -25,7 +42,6 @@ function BottomNavBar({}: Props) {
 				setShow={setShowSendMessageDrawer}
 			>
 				<div className="py-10 px-4">
-
 					{/* To box */}
 					<div className="bg-gray-50 my-6 rounded-xl p-4 my-2 flex items-center">
 						<span className="text-sm font-bold text-gray-400">
@@ -35,7 +51,7 @@ function BottomNavBar({}: Props) {
 					</div>
 
 					{/* Text editor  */}
-					<div className="my-4">					
+					<div className="my-4">
 						<textarea
 							id="message"
 							rows={4}

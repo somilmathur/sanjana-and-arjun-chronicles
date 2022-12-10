@@ -34,7 +34,7 @@ const Home = () => {
 						<span className="my-4 text-xxs text-center w-full text-gray-300 font-light">
 							No more messages to show
 						</span>
-					</div>
+					</div>					
 				</BaseLayout>
 			</div>
 		</>

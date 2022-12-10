@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import Avatar from "../global/Avatar";
 
@@ -10,8 +11,9 @@ type Props = {
 };
 
 function Message({ from, message, time, numberOfUnreadMessages }: Props) {
+	const router = useRouter();
 	return (
-		<Link href="/sanjana-and-arjun">
+		<Link href={{ pathname: "/sanjana-and-arjun", query: router.query }}>
 			<div className="my-6 flex items-center justify-between">
 				<div className="flex">
 					{/* Avatar  */}
