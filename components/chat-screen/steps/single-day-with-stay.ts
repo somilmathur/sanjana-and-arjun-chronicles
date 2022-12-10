@@ -184,7 +184,16 @@ export const singleDayWithStay = (UUID: string) => {
 		{
 			id: "send-message-to-couple-answer",
 			user: true,
-			trigger: "thanks-for-your-message",
+			trigger: (e) => {
+				fetch("/api/sendMessage", {
+					method: "POST",
+					body: JSON.stringify({
+						answers: e,
+						UUID
+					}),
+				});
+				return "thanks-for-your-message";
+			},	
 		},
 		{
 			id: "thanks-for-your-message",

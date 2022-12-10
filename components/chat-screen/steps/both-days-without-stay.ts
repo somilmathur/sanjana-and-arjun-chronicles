@@ -143,16 +143,16 @@ export const bothDaysWithoutStay = (UUID: string) => {
 		{
 			id: "positive-end",
 			message:
-				"Got it. Thanks for the info! We have added you to our list and will get in touch shortly to tell you more about our plans.",			
+				"Got it. Thanks for the info! We have added you to our list and will get in touch shortly to tell you more about our plans.",
 			trigger: (e) => {
 				fetch("/api/rsvp", {
 					method: "POST",
 					body: JSON.stringify({
 						answers: e,
-						UUID
+						UUID,
 					}),
 				});
-				return "send-message"
+				return "send-message";
 			},
 		},
 		{
@@ -163,13 +163,22 @@ export const bothDaysWithoutStay = (UUID: string) => {
 		{
 			id: "send-message-to-couple-answer",
 			user: true,
-			trigger: "thanks-for-your-message",
+			trigger: (e) => {
+				fetch("/api/sendMessage", {
+					method: "POST",
+					body: JSON.stringify({
+						answers: e,
+						UUID,
+					}),
+				});
+				return "thanks-for-your-message";
+			},
 		},
 		{
 			id: "thanks-for-your-message",
 			message: "Thanks for your message! See you soon! 🫶",
 			end: true,
 		},
-	]
-	return steps
+	];
+	return steps;
 };
