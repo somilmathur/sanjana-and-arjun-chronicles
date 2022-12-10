@@ -1,5 +1,6 @@
-export const bothDaysWithStay = {
-	steps: [
+export const bothDaysWithStay = (UUID: string) => {
+
+	let steps = [
 		{
 			id: "are-you-free",
 			message: "Are you free on 15th and 16th February, 2023?",
@@ -169,6 +170,7 @@ export const bothDaysWithStay = {
 					method: "POST",
 					body: JSON.stringify({
 						answers: e,
+						UUID
 					}),
 				});
 				return "send-message";
@@ -182,12 +184,22 @@ export const bothDaysWithStay = {
 		{
 			id: "send-message-to-couple-answer",
 			user: true,
-			trigger: "thanks-for-your-message",
+			trigger: (e) => {
+				fetch("/api/sendMessage", {
+					method: "POST",
+					body: JSON.stringify({
+						answers: e,
+						UUID
+					}),
+				});
+				return "thanks-for-your-message";
+			},			
 		},
 		{
 			id: "thanks-for-your-message",
 			message: "Thanks for your message! See you soon! 🫶",
 			end: true,
 		},
-	],
+	]
+	return steps
 };

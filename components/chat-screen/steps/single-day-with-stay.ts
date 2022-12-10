@@ -1,5 +1,6 @@
-export const singleDayWithStay = {
-	steps: [
+export const singleDayWithStay = (UUID: string) => {
+
+	let steps = [
 		{
 			id: "are-you-free",
 			message: "Are you free on 16th February, 2023?",
@@ -169,6 +170,7 @@ export const singleDayWithStay = {
 					method: "POST",
 					body: JSON.stringify({
 						answers: e,
+						UUID
 					}),
 				});
 				return "send-message";
@@ -189,5 +191,6 @@ export const singleDayWithStay = {
 			message: "Thanks for your message! See you soon! 🫶",
 			end: true,
 		},
-	],
+	]
+	return steps
 };

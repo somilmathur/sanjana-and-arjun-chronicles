@@ -14,14 +14,14 @@ const Chatbot = (props: Props) => {
 	const { UUID, Loading } : AppContextInterface = useAppContext();
 	console.log("UUID -->", UUID)
 	// This is the default configuration if no query param is given since most people will be invited for a single day and without stay.
-	let STEPS_TO_USE: any = singleDayWithoutStay.steps;
+	let STEPS_TO_USE: any = singleDayWithoutStay(UUID);
 
 	if (router.query.d === "sd" && router.query.s === "y")
 		// For people coming on just one day but require accomodation
-		STEPS_TO_USE = singleDayWithStay.steps;
+		STEPS_TO_USE = singleDayWithStay(UUID);
 	if (router.query.d === "bd" && router.query.s === "y")
 		// For people coming on both days and require accomodation
-		STEPS_TO_USE = bothDaysWithStay.steps;
+		STEPS_TO_USE = bothDaysWithStay(UUID);
 	if (router.query.d === "bd" && router.query.s === "n")
 		// For people coming on both days and don't require accomodation
 		STEPS_TO_USE = bothDaysWithoutStay(UUID);
