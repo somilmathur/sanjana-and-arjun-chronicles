@@ -56,7 +56,7 @@ function BottomNavBar({}: Props) {
 							id="message"
 							rows={4}
 							className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-xl focus:ring-gray-300 focus:border-blue-500"
-							placeholder="Send a message to the happy couple..."
+							placeholder="Send us a message to let us know how excited you are!"
 						/>
 					</div>
 

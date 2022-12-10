@@ -167,7 +167,7 @@ export const bothDaysWithoutStay = (UUID: string) => {
 				fetch("/api/sendMessage", {
 					method: "POST",
 					body: JSON.stringify({
-						answers: e,
+						message: e.steps["thanks-for-your-message"].message,
 						UUID,
 					}),
 				});

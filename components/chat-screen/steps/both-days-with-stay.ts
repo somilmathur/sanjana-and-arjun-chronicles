@@ -1,5 +1,4 @@
 export const bothDaysWithStay = (UUID: string) => {
-
 	let steps = [
 		{
 			id: "are-you-free",
@@ -170,7 +169,7 @@ export const bothDaysWithStay = (UUID: string) => {
 					method: "POST",
 					body: JSON.stringify({
 						answers: e,
-						UUID
+						UUID,
 					}),
 				});
 				return "send-message";
@@ -188,18 +187,18 @@ export const bothDaysWithStay = (UUID: string) => {
 				fetch("/api/sendMessage", {
 					method: "POST",
 					body: JSON.stringify({
-						answers: e,
-						UUID
+						message: e.steps["thanks-for-your-message"].message,
+						UUID,
 					}),
 				});
 				return "thanks-for-your-message";
-			},			
+			},
 		},
 		{
 			id: "thanks-for-your-message",
 			message: "Thanks for your message! See you soon! 🫶",
 			end: true,
 		},
-	]
-	return steps
+	];
+	return steps;
 };
