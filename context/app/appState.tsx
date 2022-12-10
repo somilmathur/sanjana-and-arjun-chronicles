@@ -33,6 +33,7 @@ const AppState = ({
 
 	// For setting the UUID of the user
 	const SetUUID = (value: string | null) => {
+    localStorage.setItem("UUID", value)
 		dispatch({ type: SET_UUID, payload: value });
 	};
 
