@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import React from "react";
 import ChatBot from "react-simple-chatbot";
-import singleDayWithStay from "./steps/single-day-with-stay.json";
-import bothDaysWithStay from "./steps/both-days-with-stay.json";
-import singleDayWithoutStay from "./steps/single-day-without-stay.json";
+import { singleDayWithStay } from "./steps/single-day-with-stay";
+import { bothDaysWithStay } from "./steps/both-days-with-stay";
+import { singleDayWithoutStay } from "./steps/single-day-without-stay";
 import { bothDaysWithoutStay } from "./steps/both-days-without-stay";
 
 type Props = {};

@@ -1,8 +1,8 @@
-export const bothDaysWithoutStay = {
+export const singleDayWithoutStay = {
 	steps: [
 		{
 			id: "are-you-free",
-			message: "Are you free on 15th and 16th February, 2023?",
+			message: "Are you free on 16th February, 2023?",
 			trigger: "are-you-free-answer",
 		},
 		{
@@ -51,7 +51,7 @@ export const bothDaysWithoutStay = {
 		{
 			id: "go-to-rsvp",
 			message:
-				"Woohoo! Awesome! We are getting married on 15th and 16th February, 2023 and we'd love for you to join us!",
+				"Woohoo! Awesome! We are getting married on 16th February, 2023 and we'd love for you to join us!",
 			trigger: "rsvp",
 		},
 		{
@@ -143,7 +143,7 @@ export const bothDaysWithoutStay = {
 		{
 			id: "positive-end",
 			message:
-				"Got it. Thanks for the info! We have added you to our list and will get in touch shortly to tell you more about our plans.",			
+				"Got it. Thanks for the info! We have added you to our list and will get in touch shortly to tell you more about our plans.",
 			trigger: (e) => {
 				fetch("/api/rsvp", {
 					method: "POST",
@@ -151,7 +151,7 @@ export const bothDaysWithoutStay = {
 						answers: e,
 					}),
 				});
-				return "send-message"
+				return "send-message";
 			},
 		},
 		{

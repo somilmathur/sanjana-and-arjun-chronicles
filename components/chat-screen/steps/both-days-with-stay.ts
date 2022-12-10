@@ -1,4 +1,4 @@
-export const bothDaysWithoutStay = {
+export const bothDaysWithStay = {
 	steps: [
 		{
 			id: "are-you-free",
@@ -75,26 +75,46 @@ export const bothDaysWithoutStay = {
 				{
 					value: "1",
 					label: "Just me",
-					trigger: "positive-end",
+					trigger: "accomodation",
 				},
 				{
 					value: "2",
 					label: "2",
-					trigger: "positive-end",
+					trigger: "accomodation",
 				},
 				{
 					value: "3",
 					label: "3",
-					trigger: "positive-end",
+					trigger: "accomodation",
 				},
 				{
 					value: "4",
 					label: "4",
-					trigger: "positive-end",
+					trigger: "accomodation",
 				},
 				{
 					value: "4+",
 					label: "4+",
+					trigger: "accomodation",
+				},
+			],
+		},
+		{
+			id: "accomodation",
+			message: "Would you be requiring accomodation?",
+			trigger: "accomodation-answer",
+		},
+		{
+			id: "accomodation-answer",
+			options: [
+				{
+					value: "yes",
+					label: "Yes, please!",
+					trigger: "positive-end",
+				},
+				{
+					value: "no",
+					label: "No, I'll manage.",
 					trigger: "positive-end",
 				},
 			],
@@ -143,7 +163,7 @@ export const bothDaysWithoutStay = {
 		{
 			id: "positive-end",
 			message:
-				"Got it. Thanks for the info! We have added you to our list and will get in touch shortly to tell you more about our plans.",			
+				"Got it. Thanks for the info! We have added you to our list and will get in touch shortly to tell you more about our plans.",
 			trigger: (e) => {
 				fetch("/api/rsvp", {
 					method: "POST",
@@ -151,7 +171,7 @@ export const bothDaysWithoutStay = {
 						answers: e,
 					}),
 				});
-				return "send-message"
+				return "send-message";
 			},
 		},
 		{

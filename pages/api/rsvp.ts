@@ -11,9 +11,9 @@ export default async function handler(req, res) {
       let bodyObject = JSON.parse(req.body);
       console.log("body", bodyObject)
       const rsvpObject = {
-        name: bodyObject.answers.steps["rsvp-answer"].message,
+        name: bodyObject.answers.steps["rsvp-answer"]?.message,
         requiresAccommodation: bodyObject.answers.steps["accomodation-answer"]?.message,
-        peopleInParty: bodyObject.answers.steps["how-many-people-answer"].message,
+        peopleInParty: bodyObject.answers.steps["how-many-people-answer"].value,
         createdAt: dayjs().utcOffset(330).format(),
         answers: bodyObject.answers.steps,
       }
