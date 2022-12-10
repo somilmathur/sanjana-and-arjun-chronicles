@@ -12,13 +12,13 @@ function SanjanaAndArjun({}: Props) {
 				<meta
 					name="description"
 					key="description"
-					content="Find the best real estate investments that will bring immense profit in the future. Here are the real estate opportunities that are safe & hassle-free."
+					content="Woohoo! We are getting married! Join us in our celebration and let's party together on 16th February, 2023!"
 				/>
 			</Head>
 			<div className="bg-gray-50 h-screen">
 				<ChatLayout>
-                    <Chatbot />
-                </ChatLayout>
+					<Chatbot />
+				</ChatLayout>
 			</div>
 		</>
 	);
