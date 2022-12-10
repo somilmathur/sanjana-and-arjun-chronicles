@@ -129,7 +129,7 @@
             "options": [
                 {
                     "value": "yes",
-                    "label": "Oh yes, that I'm done for!",
+                    "label": "Oh yes, that I'm down for!",
                     "trigger": "go-to-rsvp"
                 }							
             ]

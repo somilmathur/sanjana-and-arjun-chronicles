@@ -1,4 +1,4 @@
-{
+export const bothDaysWithoutStay = {
     "steps": [
         {
             "id": "are-you-free",
@@ -109,7 +109,7 @@
             "options": [
                 {
                     "value": "yes",
-                    "label": "Oh yes, that I'm done for!",
+                    "label": "Oh yes, that I'm down for!",
                     "trigger": "go-to-rsvp"
                 }							
             ]
@@ -144,7 +144,10 @@
             "id": "positive-end",
             "message":
                 "Got it. Thanks for the info! We have added you to our list and will get in touch shortly to tell you more about our plans.",
-            "trigger": "send-message-to-couple"
+            "trigger": ({ value, steps}) => {
+                console.log(value, steps)
+                return "send-message-to-couple"
+            },
         },
         {
             "id": "send-message-to-couple",

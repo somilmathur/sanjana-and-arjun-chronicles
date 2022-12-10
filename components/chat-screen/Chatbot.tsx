@@ -4,7 +4,7 @@ import ChatBot from "react-simple-chatbot";
 import singleDayWithStay from "./steps/single-day-with-stay.json";
 import bothDaysWithStay from "./steps/both-days-with-stay.json";
 import singleDayWithoutStay from "./steps/single-day-without-stay.json";
-import bothDaysWithoutStay from "./steps/both-days-without-stay.json";
+import { bothDaysWithoutStay } from "./steps/both-days-without-stay";
 
 type Props = {};
 
@@ -12,7 +12,7 @@ const Chatbot = (props: Props) => {
 	const router = useRouter();
 
 	// This is the default configuration if no query param is given since most people will be invited for a single day and without stay.
-	let STEPS_TO_USE = singleDayWithoutStay.steps;
+	let STEPS_TO_USE: any = singleDayWithoutStay.steps;
 
 	if (router.query.d === "sd" && router.query.s === "y")
 		// For people coming on just one day but require accomodation
@@ -24,7 +24,7 @@ const Chatbot = (props: Props) => {
 		// For people coming on both days and don't require accomodation
 		STEPS_TO_USE = bothDaysWithoutStay.steps;
 
-	const handleEnd = (renderedSteps, steps, values) => {
+	const handleEnd = ({ renderedSteps, steps, values }) => {
 		console.log("renderedSteps -->", renderedSteps);
 		console.log("steps -->", steps);
 		console.log("values -->", values);
