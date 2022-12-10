@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 			};
 			let rsvp = await db
 				.collection("rsvp")
-				.updateOne(
+				.update(
 					{ UUID },
 					{ $push: { messages: messageObject } },
 					{ upsert: true }
