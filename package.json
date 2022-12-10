@@ -17,7 +17,8 @@
     "react-draft-wysiwyg": "^1.15.0",
     "react-icons": "^4.6.0",
     "react-simple-chatbot": "^0.6.1",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "18.11.3",

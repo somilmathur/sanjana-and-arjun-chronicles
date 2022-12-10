@@ -11,6 +11,7 @@ export default async function handler(req, res) {
       let bodyObject = JSON.parse(req.body);
       console.log("body", bodyObject)
       const rsvpObject = {
+        UUID: bodyObject.UUID,
         name: bodyObject.answers.steps["rsvp-answer"]?.message,
         requiresAccommodation: bodyObject.answers.steps["accomodation-answer"]?.message,
         peopleInParty: bodyObject.answers.steps["how-many-people-answer"].value,

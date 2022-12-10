@@ -5,11 +5,13 @@ import { singleDayWithStay } from "./steps/single-day-with-stay";
 import { bothDaysWithStay } from "./steps/both-days-with-stay";
 import { singleDayWithoutStay } from "./steps/single-day-without-stay";
 import { bothDaysWithoutStay } from "./steps/both-days-without-stay";
+import { useAppContext, AppContextInterface } from '../../context/app/appContext';
 
 type Props = {};
 
 const Chatbot = (props: Props) => {
 	const router = useRouter();
+	const { UUID, Loading } : AppContextInterface = useAppContext();
 
 	// This is the default configuration if no query param is given since most people will be invited for a single day and without stay.
 	let STEPS_TO_USE: any = singleDayWithoutStay.steps;
@@ -22,7 +24,7 @@ const Chatbot = (props: Props) => {
 		STEPS_TO_USE = bothDaysWithStay.steps;
 	if (router.query.d === "bd" && router.query.s === "n")
 		// For people coming on both days and don't require accomodation
-		STEPS_TO_USE = bothDaysWithoutStay.steps;
+		STEPS_TO_USE = bothDaysWithoutStay(UUID);
 
 	const handleEnd = ({ renderedSteps, steps, values }) => {
 		console.log("renderedSteps -->", renderedSteps);
