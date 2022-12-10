@@ -75,37 +75,37 @@
                 {
                     "value": "1",
                     "label": "Just me",
-                    "trigger": "accomodation"
+                    "trigger": "accommodation"
                 },
                 {
                     "value": "2",
                     "label": "2",
-                    "trigger": "accomodation"
+                    "trigger": "accommodation"
                 },
                 {
                     "value": "3",
                     "label": "3",
-                    "trigger": "accomodation"
+                    "trigger": "accommodation"
                 },
                 {
                     "value": "4",
                     "label": "4",
-                    "trigger": "accomodation"
+                    "trigger": "accommodation"
                 },
                 {
                     "value": "4+",
                     "label": "4+",
-                    "trigger": "accomodation"
+                    "trigger": "accommodation"
                 }
             ]
         },
         {
-            "id": "accomodation",
-            "message": "Would you be requiring accomodation?",
-            "trigger": "accomodation-answer"
+            "id": "accommodation",
+            "message": "Would you be requiring accommodation?",
+            "trigger": "accommodation-answer"
         },
         {
-            "id": "accomodation-answer",
+            "id": "accommodation-answer",
             "options": [
                 {
                     "value": "yes",

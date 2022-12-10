@@ -1,17 +1,22 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import Message from "../components/chats-list/Message";
 import BaseLayout from "../layouts/BaseLayout";
 
-const Home: NextPage = () => {
+const Home = () => {
+	const router = useRouter()
+	let message = "Are you free on 16th February, 2023?" // Default message
+	if(router.query.d === "bd") message = "Are you free on 15th and 16th February, 2023?" // If inviting for both days, we'll change the message
+
 	return (
 		<>
 			<Head>
 				<meta
 					name="description"
 					key="description"
-					content="Find the best real estate investments that will bring immense profit in the future. Here are the real estate opportunities that are safe & hassle-free."
+					content="Woohoo! We are getting married! Join us in our celebration and let's party together on 16th February, 2023!"
 				/>
 			</Head>
 			<div className="bg-white h-screen">				
@@ -20,7 +25,7 @@ const Home: NextPage = () => {
 						time="12:36"
 						numberOfUnreadMessages={2}
 						from="Sanjana and Arjun"
-						message="Are you free on 16th February, 2023?"
+						message={message}
 					/>
 
 					{/* No more messages right now  */}

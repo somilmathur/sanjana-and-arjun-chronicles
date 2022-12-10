@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { useRef } from "react";
+import React from "react";
 import ChatBot from "react-simple-chatbot";
 import singleDayWithStay from "./steps/single-day-with-stay.json";
 import bothDaysWithStay from "./steps/both-days-with-stay.json";
@@ -10,7 +10,6 @@ type Props = {};
 
 const Chatbot = (props: Props) => {
 	const router = useRouter();
-	console.log("router -->", router);
 
 	// This is the default configuration if no query param is given since most people will be invited for a single day and without stay.
 	let STEPS_TO_USE = singleDayWithoutStay.steps;
@@ -25,6 +24,12 @@ const Chatbot = (props: Props) => {
 		// For people coming on both days and don't require accomodation
 		STEPS_TO_USE = bothDaysWithoutStay.steps;
 
+	const handleEnd = (renderedSteps, steps, values) => {
+		console.log("renderedSteps -->", renderedSteps);
+		console.log("steps -->", steps);
+		console.log("values -->", values);
+	};
+
 	return (
 		<div className="my-4">
 			{router.isReady && (
@@ -33,6 +38,7 @@ const Chatbot = (props: Props) => {
 					hideBotAvatar
 					hideUserAvatar
 					userDelay={0}
+					handleEnd={handleEnd}
 					placeholder="Type here..."
 					style={{
 						background: "#ffffff00",
