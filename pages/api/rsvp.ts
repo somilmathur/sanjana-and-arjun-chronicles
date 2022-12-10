@@ -9,6 +9,7 @@ export default async function handler(req, res) {
   switch (req.method) {
     case "POST":
       let bodyObject = JSON.parse(req.body);
+      console.log("body", bodyObject)
       const rsvpObject = {
         name: bodyObject.steps["rsvp-answer"].message,
         requiresAccommodation: bodyObject.steps["accomodation-answer"]?.message,
