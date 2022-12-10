@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { FiUser } from "react-icons/fi";
+import { useAppContext } from "../../context/app/appContext";
 import DummyModal from "../dummy-modals/DummyModal";
 
 type Props = {};
 
 function Navbar({}: Props) {
 	const [showProfileModal, setShowProfileModal] = useState(false);
+	const { User } = useAppContext();
 	return (
 		<>
 			<div className="h-20 w-full bg-white flex justify-between items-center rounded-b-3xl">
-				<h3 className="text-2xl font-bold text-gray-900">Hey there! 👋</h3>
+				<h3 className="text-2xl font-bold text-gray-900">
+					Hey {User?.name || "there!"} 👋
+				</h3>
 
 				{/* Profile button   */}
 
