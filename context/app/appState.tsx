@@ -18,7 +18,8 @@ const AppState = ({
 }) => {
 	// Check if the user is opening the site for the first time. If so, we assign him a UUID and store the data in the app context.
 	useEffect(() => {
-		if (localStorage.getItem("UUID") !== null) SetUUID(localStorage.getItem("UUID"));
+    const UUID = localStorage.getItem("UUID")
+		if (UUID) SetUUID(UUID);
     else SetUUID(uuidv4())
 	}, []);
 
@@ -32,7 +33,7 @@ const AppState = ({
 	};
 
 	// For setting the UUID of the user
-	const SetUUID = (value: string | null) => {
+	const SetUUID = (value: string) => {
     localStorage.setItem("UUID", value)
 		dispatch({ type: SET_UUID, payload: value });
 	};
