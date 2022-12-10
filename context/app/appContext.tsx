@@ -1,10 +1,14 @@
 import { createContext, useContext } from "react";
+import { UserType } from "./types";
 
 export interface AppContextInterface {
 	SetLoading: (payload: boolean) => void;
 	SetUUID: (payload: string) => void;
+	SetUser: (payload: UserType) => void;
 	Loading: boolean,
-	UUID: string
+	UUID: string,
+	GetUser: (UUID: string) => void,
+	User: null | UserType
 }
 
 /**

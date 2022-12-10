@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import AppReducer from "./appReducer";
 import { AppContextInterface, AppContextProvider } from "./appContext";
-import { SET_LOADING, SET_UUID, StateTypes, StateDefaultValue } from "./types";
+import { SET_LOADING, SET_UUID, SET_USER, StateTypes, StateDefaultValue, UserType } from './types';
 import { v4 as uuidv4 } from "uuid";
 
 const AppState = ({
@@ -16,6 +16,12 @@ const AppState = ({
 }: {
 	children: boolean | ReactNode | ReactFragment | ReactPortal;
 }) => {
+
+
+	const initialState: StateTypes = StateDefaultValue;
+
+	const [state, dispatch] = useReducer(AppReducer, initialState);
+
 	// Check if the user is opening the site for the first time. If so, we assign him a UUID and store the data in the app context.
 	useEffect(() => {
     const UUID = localStorage.getItem("UUID")
@@ -23,9 +29,12 @@ const AppState = ({
     else SetUUID(uuidv4())
 	}, []);
 
-	const initialState: StateTypes = StateDefaultValue;
-
-	const [state, dispatch] = useReducer(AppReducer, initialState);
+  useEffect(() => {
+    if(state.UUID) {
+      GetUser(state.UUID)
+    }
+  }, [state.UUID])
+  
 
 	// For setting the global loading state
 	const SetLoading = (value: boolean) => {
@@ -38,10 +47,30 @@ const AppState = ({
 		dispatch({ type: SET_UUID, payload: value });
 	};
 
+  // For setting the user details in global state
+	const SetUser = (user: UserType) => {
+    console.log("setting the following user from client --> ", user)
+		dispatch({ type: SET_USER, payload: user });
+	};
+
+  // To get the user details from the database 
+  const GetUser = async (UUID: string) => {
+    console.log()
+    const user = await fetch(`/api/getUser?UUID=${UUID}`, {
+      method: "GET"    
+    }).then(res => res.json().then((res: UserType | null) => {
+      return res
+    }));
+    if(user) SetUser(user)
+	};
+
 	const context: AppContextInterface = {
 		SetLoading,
 		Loading: state.Loading,
 		SetUUID,
+    SetUser,
+    GetUser,
+    User: state.User,
 		UUID: state.UUID,
 	};
 
