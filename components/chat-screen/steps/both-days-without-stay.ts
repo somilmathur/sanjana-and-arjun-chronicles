@@ -144,8 +144,8 @@ export const bothDaysWithoutStay = {
             "id": "positive-end",
             "message":
                 "Got it. Thanks for the info! We have added you to our list and will get in touch shortly to tell you more about our plans.",
-            "trigger": ({ value, steps}) => {
-                console.log(value, steps)
+            "trigger": (e) => {
+                console.log(e)
                 return "send-message-to-couple"
             },
         },
