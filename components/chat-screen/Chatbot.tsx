@@ -3,14 +3,11 @@ import ChatBot from "react-simple-chatbot";
 
 type Props = {};
 
-const Chatbot = (props: Props) => {
-	const chatbotRef = useRef()
-	console.log("chatbotRef", chatbotRef)
+const Chatbot = (props: Props) => {	
 	return (
 		<div className="my-4">
 			<ChatBot
 				hideHeader
-				ref={chatbotRef}
 				hideBotAvatar
 				hideUserAvatar	
 				userDelay={0}
