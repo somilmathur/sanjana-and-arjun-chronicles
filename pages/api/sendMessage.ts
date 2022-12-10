@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 			console.log("body", bodyObject);
 			const UUID = bodyObject.UUID;
 			const messageObject = {
-				message: bodyObject.steps["send-message-to-couple-answer"].message,
+				message: bodyObject.answers.steps["send-message-to-couple-answer"].message,
 				createdAt: dayjs()
 					.utcOffset(330)
 					.format(),
