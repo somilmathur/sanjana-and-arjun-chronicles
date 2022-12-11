@@ -11,7 +11,7 @@ const Location = () => {
 				<meta
 					name="description"
 					key="description"
-					content="Woohoo! We are getting married! Join us in our celebration and let's party together on 16th February, 2023!"
+					content="Woohoo! Sanjana and Arjun are getting married! Join us in our celebration and let's party together on 16th February, 2023!"
 				/>
 			</Head>
 			<div className="bg-white h-screen">				
