@@ -157,7 +157,7 @@ export const singleDayWithoutStay = (UUID: string) => {
 		},
 		{
 			id: "send-message",
-			message: "Meanwhile, do you have any message for the couple??",
+			message: "Meanwhile, do you have any message for the couple?",
 			trigger: "send-message-to-couple-answer",
 		},
 		{
