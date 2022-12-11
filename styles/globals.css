@@ -70,6 +70,21 @@
   --primary-theme: #ff5e5e;
 }
 
+.bg {
+  position: relative;
+}
+
+.bg::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('/img/bg.webp');
+  opacity: .04;
+  content: "";
+  z-index: -1;
+}
 
 
 .noscroll {

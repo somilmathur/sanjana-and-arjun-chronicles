@@ -51,7 +51,7 @@ export const singleDayWithoutStay = (UUID: string) => {
 		{
 			id: "go-to-rsvp",
 			message:
-				"Woohoo! Awesome! We are getting married on 16th February, 2023 and we'd love for you to join us!",
+				"Woohoo! Awesome! Sanjana and Arjun are getting married on 16th February, 2023 and we'd love for you to join us!",
 			trigger: "rsvp",
 		},
 		{
@@ -109,7 +109,7 @@ export const singleDayWithoutStay = (UUID: string) => {
 			options: [
 				{
 					value: "yes",
-					label: "Oh yes, that I'm down for!",
+					label: "Oh yes, I'm down for that!",
 					trigger: "go-to-rsvp",
 				},
 			],
@@ -124,7 +124,7 @@ export const singleDayWithoutStay = (UUID: string) => {
 			options: [
 				{
 					value: "yes",
-					label: "Yes, who doesn't?",
+					label: "Yep, who doesn't?",
 					trigger: "go-to-rsvp",
 				},
 				{
@@ -157,7 +157,7 @@ export const singleDayWithoutStay = (UUID: string) => {
 		},
 		{
 			id: "send-message",
-			message: "Meanwhile, do you have anything else you'd like to say to us?",
+			message: "Meanwhile, do you have any message for the couple??",
 			trigger: "send-message-to-couple-answer",
 		},
 		{

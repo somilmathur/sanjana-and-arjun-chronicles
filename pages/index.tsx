@@ -19,7 +19,7 @@ const Home = () => {
 					content="Woohoo! Sanjana and Arjun are getting married! Join us in our celebration and let's party together on 16th February, 2023!"
 				/>
 			</Head>
-			<div className="bg-white h-screen">				
+			<div className="h-screen bg z-20">				
 				<BaseLayout>
 					<Message
 						time="12:36"

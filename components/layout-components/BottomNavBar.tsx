@@ -31,7 +31,7 @@ function BottomNavBar({}: Props) {
 	};
 
 	return (
-		<div className="h-20 w-full px-10 items-center fixed bottom-0 flex justify-around items-center shadow-custom-card rounded-t-3xl">
+		<div className="h-20 w-full bg-white px-10 items-center fixed bottom-0 flex justify-around items-center shadow-custom-card rounded-t-3xl">
 			<Link href={{ pathname: "/", query: router.query }}>
 				<FiMessageCircle
 					className={`text-3xl text-${
