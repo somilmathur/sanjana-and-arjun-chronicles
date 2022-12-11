@@ -33,7 +33,7 @@ function CallModal({ show, setShow }: Props) {
 						/>
 					</div>
 				</div>
-				<p className="text-gray-200 font-normal text-center text-xxs">
+				<p className="text-gray-100 font-normal text-center text-xxs">
 					The bride's clearly brother took the easy way out here too but hey
 					hope it does the trick!
 				</p>
