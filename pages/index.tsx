@@ -7,8 +7,8 @@ import BaseLayout from "../layouts/BaseLayout";
 
 const Home = () => {
 	const router = useRouter()
-	let message = "Are you free on 16th February, 2023?" // Default message
-	if(router.query.d === "bd") message = "Are you free on 15th and 16th February, 2023?" // If inviting for both days, we'll change the message
+	let message = "A celebration hard to miss is coming your way! Are you free on 16th February, 2023?" // Default message
+	if(router.query.d === "bd") message = "A celebration hard to miss is coming your way! Are you free on 15th and 16th Feb, 2023?" // If inviting for both days, we'll change the message
 
 	return (
 		<>

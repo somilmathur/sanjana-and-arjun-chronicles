@@ -20,7 +20,7 @@ function Message({ from, message, time, numberOfUnreadMessages }: Props) {
 					<Avatar />
 
 					{/* Message */}
-					<div>
+					<div className="flex flex-col">
 						<h6 className="font-bold text-gray-900 text-xl">{from}</h6>
 						<span className="font-regular text-gray-500 text-xs">
 							{message}

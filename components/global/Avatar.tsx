@@ -8,7 +8,7 @@ type Props = {
 
 function Avatar({height, width, hideOnlineIndicator}: Props) {
 	return (
-		<div className="flex -space-x-2 overflow-hidden mr-4 relative">
+		<div className="flex -space-x-2 overflow-hidden mr-4 relative items-center flex-none">
 			<img
 				className={`inline-block ${height || "h-14"} ${width || "w-14"} rounded-full ring-2 ring-white`}
 				src="/img/avatar.jpeg"

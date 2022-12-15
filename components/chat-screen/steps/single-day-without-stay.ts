@@ -2,7 +2,7 @@ export const singleDayWithoutStay = (UUID: string) => {
 	let steps = [
 		{
 			id: "are-you-free",
-			message: "Are you free on 16th February, 2023?",
+			message: "A celebration hard to miss is coming your way! Are you free on 16th February, 2023?",
 			trigger: "are-you-free-answer",
 		},
 		{
