@@ -5,7 +5,7 @@ type Props = {};
 
 function ClickHere({}: Props) {
 	return (
-		<div className="absolute right-20 rotate-0 z-50">
+		<div className="absolute left-10 top-64 rotate-45 z-50">
 			<Player
 				autoplay
 				loop				
