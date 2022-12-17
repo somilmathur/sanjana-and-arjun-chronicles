@@ -2,10 +2,15 @@ import React from "react";
 import Head from "next/head";
 import ChatLayout from "../layouts/ChatLayout";
 import Chatbot from "../components/chat-screen/Chatbot";
+import { useEffect } from 'react';
 
 type Props = {};
 
 function SanjanaAndArjun({}: Props) {
+	useEffect(() => {
+	  localStorage.setItem("clickHereIndicationShown", "true")
+	}, [])
+	
 	return (
 		<>
 			<Head>

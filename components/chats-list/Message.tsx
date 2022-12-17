@@ -14,7 +14,7 @@ function Message({ from, message, time, numberOfUnreadMessages }: Props) {
 	const router = useRouter();
 	return (
 		<Link href={{ pathname: "/sanjana-and-arjun", query: router.query }}>
-			<div className="my-6 flex items-center justify-between">
+			<div className="my-6 flex items-center justify-between relative z-50 bg-white rounded-xl shadow-all-sides-white">
 				<div className="flex">
 					{/* Avatar  */}
 					<Avatar />

@@ -30,6 +30,7 @@ module.exports = {
         '3.5rem': '3.5rem',
       },
       boxShadow: {
+        'all-sides-white': '0 0px 0px 10px rgb(255 255 255) !important',
         'custom-card':
           '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0px 24px -1px rgba(0, 0, 0, 0.06) !important',
         'scroll-button':
