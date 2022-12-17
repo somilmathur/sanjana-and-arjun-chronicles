@@ -5,12 +5,12 @@ type Props = {};
 
 function ClickHere({}: Props) {
 	return (
-		<div className="absolute right-20 top-60 z-50">
+		<div className="absolute right-20 rotate-0 z-50">
 			<Player
 				autoplay
 				loop				
 				src="./arrow.json"
-				style={{ height: "80px", width: "80px" }}
+				style={{ height: "100px", width: "100px" }}
 			>
 				<Controls visible={false} />
 			</Player>
