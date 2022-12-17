@@ -10,7 +10,7 @@ function ClickHere({}: Props) {
 				autoplay
 				loop				
 				src="./arrow.json"
-				style={{ height: "100px", width: "100px" }}
+				style={{ height: "120px", width: "120px" }}
 			>
 				<Controls visible={false} />
 			</Player>
