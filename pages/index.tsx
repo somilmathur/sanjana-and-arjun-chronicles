@@ -56,7 +56,7 @@ const Home = () => {
 				{showClickHereIndication && (
 					<>
 						<ClickHere />
-						<div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-10" />
+						<div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-5" />
 					</>
 				)}
 			</div>

@@ -8,8 +8,8 @@ function ClickHere({}: Props) {
 		<div className="absolute right-20 top-60 z-50">
 			<Player
 				autoplay
-				loop
-				src="./click-here.json"
+				loop				
+				src="./arrow.json"
 				style={{ height: "80px", width: "80px" }}
 			>
 				<Controls visible={false} />
