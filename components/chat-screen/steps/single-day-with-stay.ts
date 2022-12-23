@@ -51,7 +51,7 @@ export const singleDayWithStay = (UUID: string) => {
 		{
 			id: "go-to-rsvp",
 			message:
-				"Woohoo! Awesome! Sanjana and Arjun are getting married on 16th February, 2023 and we'd love for you to join us!",
+				"Woohoo! Awesome! Sanjana and Arjun are getting married on 16th February, 2023 in Delhi and we'd love for you to join us!",
 			trigger: "rsvp",
 		},
 		{
