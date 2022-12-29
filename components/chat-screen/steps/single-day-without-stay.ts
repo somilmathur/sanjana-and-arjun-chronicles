@@ -1,4 +1,5 @@
 export const singleDayWithoutStay = (UUID: string) => {
+	
 	let steps = [
 		{
 			id: "are-you-free",
